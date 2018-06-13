@@ -41,8 +41,8 @@ function getDataFromApi(searchTerm, callback) {
 
 function renderResult(results) {
   return `
-    <div>
-      <a href="https://www.youtube.com/watch?v=${results.id.videoId}"><img src="${results.snippet.thumbnails.medium.url}" alt=""></a><br>
+    <div class="results">
+      <a href="https://www.youtube.com/watch?v=${results.id.videoId}"><img src="${results.snippet.thumbnails.medium.url}" alt="${results.snippet.title}"></a><br>
 
       ${results.snippet.title}</a> by <a href="${results.snippet.channelTitle}" target="_blank">${results.snippet.channelTitle}</a>
     </div>
